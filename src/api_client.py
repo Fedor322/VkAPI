@@ -45,14 +45,18 @@ class VkApiClient:
         )
         res = []
         for user in request:
+            city_info = ""
+            if 'city' in user:
+                city_info = f"   Город: {user['city'].get('title', 'Город не указан')}\n"
+            else:
+                city_info = "   Город не указан\n"
             bdate_str = f"  🥳Дата рождения: {user['bdate']}\n" if 'bdate' in user else ""
-
             user_info =UserProfile(
                 first_name=user.get('first_name', ''),
                 last_name=user.get('last_name', ''),
                 user_id=str(user.get('id', 'userid не указан')),
                 birth_date=bdate_str,
-                city=f"   Город: {user['city'].get('title', 'Город не указан')}\n",
+                city=city_info,
                 is_closed= "Профиль открыт\n" if  user.get('is_closed',False) else "Профиль закрыт\n"
             )
             res.append(user_info)

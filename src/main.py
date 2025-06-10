@@ -67,7 +67,7 @@ def get_int_id(vk_api_client, user_input):
 
 
 def main():
-    TOKEN = ""
+    TOKEN = "vk1.a.jOY6EYWJUmhg6Be-su_KPUmklXxKjurc7vkigBMEPgjylavhBiIxBUnyOFcgaTcmkVm8mU1hV3XkISZx57-BQFe6-qb83onHAdLQsX4eZxcuXDm9iPoVHmHFwhDwpjasJ9rrMXkSxBWfBKJjeNFKtSm4IE_1Tfxb2QTu9Cosh1H6ZqLjZvUHBxRmfrzXuBH8cHDyzD0WSivAobchS55Bww"
     vk_api_client = VkApiClient(TOKEN)
     print("Выберите действие")
     print("Пользователь")
